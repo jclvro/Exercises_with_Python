@@ -1,0 +1,25 @@
+# Objetivo: Comparar el promedio de dos listas de notas y decir cuál es mayor.
+matematicas = [10.0, 10.0, 10.0, 10.0, 9.7]
+lenguaje = [9.5, 7.5, 8.5, 9.5, 9.5]
+
+total_matematicas = sum(matematicas)
+total_lenguaje = sum(lenguaje)
+
+print(f"El total de puntos en matemáticas es de {total_matematicas:.2f} puntos.")
+print(f"El total de puntos en lenguaje es de {total_lenguaje:.2f} puntos.")
+
+prom_matematicas = total_matematicas / len(matematicas)
+prom_lenguaje = total_lenguaje / len(lenguaje)
+
+print(f"El promedio de las puntuaciones de matemáticas es de {prom_matematicas:.2f} puntos.")
+print(f"El promedio de las puntuaciones de lenguaje es de {prom_lenguaje:.2f} puntos.")
+
+if total_matematicas > total_lenguaje:
+    print("La puntuación total de matemáticas es mayor.")
+else:
+    print("La puntuación total de lenguaje es mayor.")
+
+if prom_matematicas > prom_lenguaje:
+    print(f"El promedio de matemáticas ({prom_matematicas:.2f}) es mayor.")
+else:
+    print(f"El promedio de lenguaje ({prom_lenguaje:.2f}) es mayor.")
