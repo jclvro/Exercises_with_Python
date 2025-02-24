@@ -1,0 +1,16 @@
+# Análisis de ventas semanales
+
+ventas = [41.5, 20.0, 32.75, 55.25, 43.0, 39.9, 30.0]
+total_ventas = sum(ventas)
+dias = len(ventas)
+promedio_ventas = total_ventas / dias
+
+print(f"Ventas totales de {dias} días: {total_ventas:.2f} euros.")
+print(f"Promedio diario: {promedio_ventas:.2f} euros.")
+print()
+
+if total_ventas > 300:
+    print("¡Semana muy rentable!")
+
+if promedio_ventas < 45:
+    print(f"Promedio bajo ({promedio_ventas:.2f} euros), revisar estrategia.")
