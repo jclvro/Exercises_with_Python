@@ -1,0 +1,18 @@
+# Control de inventario
+
+inventario = [10, 10, 20, 10, 10]
+precio_unitario = 12.5
+total_unidades = sum(inventario)
+cantidad_productos = len(inventario)
+valor_total = total_unidades * precio_unitario
+promedio_unidades = total_unidades / cantidad_productos
+
+print(f"Total de unidades en inventario: {total_unidades} unidades.")
+print(f"Cantidad de productos: {cantidad_productos} unidades.")
+print(f"Valor total del inventario: {valor_total:.2f} euros.")
+print(f"Promedio de unidades por producto: {promedio_unidades:.2f} unidades")
+
+if promedio_unidades < 15:
+    print(f"Advertencia: Stock promedio bajo: {promedio_unidades:.2f} unidades.")
+else:
+    print("Parece que de momento hay suficiente stock promedio.")
