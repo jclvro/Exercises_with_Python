@@ -1,0 +1,20 @@
+# Planificación de un evento
+
+asistentes_por_dia = [9, 10, 7, 8]
+costo_por_persona = 8.75
+total_asistentes = sum(asistentes_por_dia)
+dias_evento = len(asistentes_por_dia)
+costo_total = total_asistentes * costo_por_persona
+costo_promedio_dia = costo_total / dias_evento
+presupuesto = 500.0
+
+print(f"Total de asistentes: {total_asistentes} personas.")
+print(f"Días del evento: {dias_evento} días.")
+print(f"Costo total: {costo_total:.2f} euros.")
+print(f"Costo promedio por día: {costo_promedio_dia:.2f} euros.")
+
+if costo_total <= presupuesto:
+    print("El presupuesto es suficiente.")
+else:
+    diferencia = costo_total - presupuesto 
+    print(f"Necesitas {diferencia:.2f} euros adicionales.")
