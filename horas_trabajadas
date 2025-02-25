@@ -1,0 +1,20 @@
+# Gestión de horas trabajadas
+
+horas_trabajadas = [5, 5, 4, 10, 2]
+pago_por_hora = 15.0
+limite_horas = 40
+total_horas = sum(horas_trabajadas)
+dias_trabajados = len(horas_trabajadas)
+promedio_horas = total_horas / dias_trabajados
+pago_total = total_horas * pago_por_hora
+
+print(f"Total horas trabajadas: {total_horas} horas.")
+print(f"Días trabajados: {dias_trabajados} días.")
+print(f"Promedio diario: {promedio_horas:.2f} horas.")
+print(f"Pago total: {pago_total:.2f} euros.")
+
+if total_horas > limite_horas:
+    horas_extra = total_horas - limite_horas
+    print(f"Horas extra: {horas_extra:.2f} a pagar doble.")
+else:
+    print("No hay horas extras esta semana.")
