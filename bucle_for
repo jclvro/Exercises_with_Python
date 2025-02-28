@@ -1,0 +1,45 @@
+# Ejemplo sencillo Bucle For
+nombres = ["Jose", "Paco", "Renato"]
+for nombre in nombres:
+    print(f"Hola {nombre}") 
+
+# Bucle For Sumar con un bucle
+numeros =[1, 2, 3, 4]
+total = 0
+for num in numeros:
+    total += num
+    print(f"La suma es: {total}")
+
+# Bucle For Contar elementos específicos
+numeros = [5, 12, 8, 15, 3]
+mayores_10 = 0
+for num in numeros:
+    if num > 10:
+        mayores_10 += 1
+print(f"Hay {mayores_10} números mayores de 10.") 
+
+# Análisis de consumo de energía
+consumo_diario = [12.5, 15.0, 18.75, 9.0, 22.0]
+costo_por_kwh = 0.20
+limite_diario = 15.0
+total_consumo = sum(consumo_diario)
+dias = len(consumo_diario)
+consumo_promedio = total_consumo / dias
+costo_total = total_consumo * costo_por_kwh
+
+print(f"Total de consumo: {total_consumo:.2f} kWh.")
+print(f"Días registrados: {dias} días.")
+print(f"Consumo promedio diario: {consumo_promedio} kWh.")
+print(f"Costo total: {costo_total:.2f} euros.")
+
+if consumo_promedio > limite_diario:
+    exceso = consumo_promedio - limite_diario
+    print(f"El promedio diario excede el límite por {exceso:.2f} kWh.")
+else:
+    print("El consumo está dentro de los límites establecidos.")
+
+dias_excesivos = 0
+for consumo in consumo_diario:
+    if consumo > limite_diario:
+        dias_excesivos += 1
+print(f"Días con uso excesivo: {dias_excesivos} días")
