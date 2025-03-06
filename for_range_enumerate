@@ -1,0 +1,23 @@
+# For directo
+gastos = [10, 20, 30]
+for gasto in gastos:
+    if gasto > 15:
+        print(f"Gasto alto: {gasto:.2f}")
+    else:
+        print(f"Gasto normal: {gasto:.2f}")    
+
+# For con range()
+gastos = [10, 20 ,30]
+for i in range(len(gastos)):
+    if gastos[i] > 15:
+        print(f"Gasto {i + 1}: Gasto alto {gastos[i]}")
+    else:
+        print(f"Gasto {i + 1}: Gasto normal {gastos[i]}")
+
+# For con enumerate()
+gastos = [10, 20, 30]
+for i, gasto in enumerate(gastos, 1):
+    if gasto > 15:
+        print(f"Gasto {i}: Gasto alto {gasto}")
+    else:
+        print(f"Gasto {i}: Gasto normal {gasto}")
