@@ -1,0 +1,26 @@
+# Análisis de consumo de energía
+
+consumo_diario = [12.5, 15.0, 18.75, 9.0, 22.0]
+costo_por_kwh = 0.20
+limite_diario = 15.0
+total_consumo = sum(consumo_diario)
+dias = len(consumo_diario)
+consumo_promedio = total_consumo / dias
+costo_total = total_consumo * costo_por_kwh
+dias_excesivos = 0
+
+for i, consumo in enumerate(consumo_diario, 1):
+    if consumo > limite_diario:
+        dias_excesivos += 1
+        print(f"Día {i}: {consumo:.2f} kWh excesivo.")
+
+print()
+print(f"Total de consumo: {total_consumo:.2f} kWh.")    
+print(f"Días registrados: {dias} días.")
+print(f"Consumo promedio diário: {consumo_promedio:.2f} kWh.")
+print(f"Costo total: {costo_total:.2f} euros.")
+print(f"Días con uso excesivo: {dias_excesivos} días.")
+
+if consumo_promedio > limite_diario:
+    exceso = consumo_promedio - limite_diario
+    print(f"El promedio diário excede el límite por {exceso:.2f} kWh.")
