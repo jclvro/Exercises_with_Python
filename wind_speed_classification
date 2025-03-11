@@ -1,0 +1,34 @@
+# Clasificación de velocidades y viento
+
+velocidades = [5.2, 12.8, 25.0, 8.5, 18.3, 30.1]
+limite_bajo = 10.0
+limite_alto = 20.0
+bajas = 0
+altas = 0
+moderadas = 0
+sum_altas = 0
+
+for i, velocidad in enumerate(velocidades, 1):
+        if velocidad < limite_bajo:
+                bajas += 1
+                estado = "Baja"
+        elif velocidad > limite_alto:
+                altas += 1
+                sum_altas += velocidad
+                estado = "Alta"
+        else:
+                moderadas += 1
+                estado = "Moderada"
+        print(f"Día {i}: {velocidad:.2f} Km/h - {estado}.")
+print()
+print(f"Total bajas: {bajas}.")
+print(f"Total moderadas: {moderadas}.")
+print(f"Total altas: {altas}.")
+print()
+
+promedio_altas = sum_altas / altas
+if promedio_altas == 0:
+        print(f"No hay velocidades altas.")
+else:
+        print(f"Promedio de velocidades altas: {promedio_altas:.2f} Km/h")
+
