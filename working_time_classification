@@ -1,0 +1,33 @@
+# Clasificación jornadas laborales
+
+horas_trabajadas = [6.5, 8.0, 9.5, 4.0, 7.5, 10.0]
+limite_corto = 7.0
+limite_normal = 8.0
+cortas = 0
+normales = 0
+largas = 0
+horas_extras = 0
+horas_extras_acumuladas = 0
+
+for i, horas in enumerate(horas_trabajadas, 1):
+    if horas < limite_corto:
+        cortas += 1
+        estado = "Limite corto"
+    elif horas > limite_normal:
+        largas += 1
+        horas_extras = horas - limite_normal
+        horas_extras_acumuladas += horas_extras
+        estado = "Límite largo"
+    else:
+        normales += 1
+        estado = "Límite normal"
+    print(f"Día {i}: {horas:.1f} h. - {estado}")
+print()
+print(f"Total jornadas cortas: {cortas}")
+print(f"Total jornadas normales: {normales}")
+print(f"Total jornadas altas: {largas}")
+
+if horas_extras_acumuladas > 0:
+    print(f"Horas extras acumuladas: {horas_extras_acumuladas:.2f} h.")
+else:
+    print("No hay horas extras.")
