@@ -1,0 +1,17 @@
+# Adivina el número con contador de intentos
+
+numero_secreto = 7
+numero = 0
+intentos = 0
+max_intentos = 5
+while numero != numero_secreto and intentos < max_intentos:
+    intentos += 1
+    numero = int(input('Adivina el número (1-10): '))
+    if numero < numero_secreto:
+        print('Demasiado bajo, intenta de nuevo.')
+    elif numero > numero_secreto:
+        print('Demasiado alto, intenta de nuevo.')    
+if numero == numero_secreto:
+        print(f'¡Felicidades! Adivinaste el número ({numero_secreto}) en {intentos} intentos.')
+else:
+     print(f'Demasiados intentos. El número era {numero_secreto}.')
